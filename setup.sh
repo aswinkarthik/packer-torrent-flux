@@ -2,10 +2,15 @@
 
 set -e 
 
-sleep 30
+sleep 15
+
+if [ -z $MYSQL_PASSWORD ]; then
+	echo "MYSQL_PASSWORD env not set. Exiting"
+	exit 1
+fi
+
 sudo su
 sudo apt-get update
-
 
 echo "Setup script intialized..."
 echo "Installing essentials..."
