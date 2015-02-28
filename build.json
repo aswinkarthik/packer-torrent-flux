@@ -1,0 +1,24 @@
+{
+	"variables": {
+		"mysql_password": "{{env `MYSQL_PASSWORD`}}"
+	},
+	
+	"builders": [
+		{
+			"type": "digitalocean",
+			"droplet_name": "torrent-flux",
+			"region": "sgp1",
+			"size": "512mb"
+		}
+	],
+
+	"provisioners": [
+		{
+			"type": "shell",
+			"script": "setup.sh",
+			"environment_vars": [
+				"MYSQL_PASSWORD={{user `mysql_password`}}"
+			]
+		}
+	]
+}
