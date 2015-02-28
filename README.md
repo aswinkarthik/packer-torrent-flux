@@ -7,7 +7,7 @@ WORK IN PROGRESS
 
 ### Configuration
 - Create a file called `config.sh`
-- Set environment variables DO\_API\_KEY, DO\_CLIENT\_ID, TFLUX\_URL depending on your Digital ocean API Key, Client_ID.
+- Set environment variables DIGITALOCEAN\_API\_KEY, DIGITALOCEAN\_CLIENT\_ID depending on your Digital ocean API Key, Client_ID.
 - Look at template file `config.sh.tmpl`
 
 ### Example configuration file
